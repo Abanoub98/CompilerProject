@@ -16,5 +16,15 @@ namespace CompilerProject
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //compile button
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //browse button
+        }
     }
 }
