@@ -82,7 +82,7 @@ Then two CSV files should be saved in the input directory as shown
 - Dataset CSV file: contain the first column to show the labels of the dataset, while the rest columns shows the extracted keypoints 
 - Meta-Data CSV file: it contains the seven meta-data for the exctration process as shown in the next table
 
-#### Meta-Data
+#### Extraction process Meta-Data
 
 | Data Label                     | Description                                |
 | ----------------------------- | ------------------------------------------ |
@@ -90,7 +90,7 @@ Then two CSV files should be saved in the input directory as shown
 | `keypoint_extractor_type`                  | Shows the extraction type as pre input. |
 | `sequence_length`         | Shows the number of frames as pre input. |
 | `n_words` | Shows the number of the signs in the used dataset. |
-| `n_samples`                 | Shows the number of samples in each sign from the used dataset. |
+| `n_samples`                 | Shows the number of samples from the used dataset. |
 | `count_of_features`        | Shows the number of the extracted features. |
 | `extracted body parts` | Shows the extracted parts of the body. |
 
@@ -114,16 +114,44 @@ Enter "2" for the selection as shown
   <img src="docs/images/train the model.png" alt="Train the model selection" height="150"/>
 </p>
 After the selection, the training process will start immediately using the pre-initialized params.
+
 After a successful train, the output will be six different files that will be saved automatically in the directory that appears on console.
 
-
 The outputed six files:
+
+<p align="center">
+  <img src="docs/images/Model_folder.jpeg" height="300"/>
+</p>
+
 ##### 1. accuracy.png: A plot image for the accuracy throughout the training
-##### 2. loss.png: A plot image for the loss throughout the training
-##### 3. history.csv: The history of the accuracy and the loss numbers throughout training
-##### 4. labels.npy: The labels’ names that the model trained on
-##### 5. model.h5: The trained model for testing and deployment
-##### 6. Meta-Data.csv: A CSV file contains all the details about the model and the dataset process as shown in the next table
+##### 2. history.csv: The history of the accuracy and the loss numbers throughout training
+##### 3. labels.npy: The labels or the unique actions that the model trained on
+##### 4. loss.png: A plot image for the loss throughout the training
+##### 5. Meta-Data.csv: A CSV file contains all the details about the model and the dataset process as shown in the next table
+
+#### Training Process Meta-Data
+
+| Data Label                     | Description                                |
+| ----------------------------- | ------------------------------------------ |
+| `dataset`                        | Shows the dataset name as pre input. |
+| `keypoint_extractor_type`                  | Shows the extraction type as pre input. |
+| `sequence_length`         | Shows the number of frames as pre input. |
+| `n_words` | Shows the number of the signs in the used dataset. |
+| `count_of_features`        | Shows the number of the extracted features. |
+| `extracted body parts` | Shows the extracted parts of the body. |
+| `n_samples`               | Shows the total number of samples from the used dataset. |
+| `train_samples`              | Shows the number of samples that used for training. |
+| `validation_samples`         | Shows the number of samples that used for validation. |
+| `test_samples`               | Shows the number of samples that used for testing. |
+| `Model_Type`                 | Shows the used model name. |
+| `loss & accuracy (train)`                | Shows the loss and accuracy of training. |
+| `loss & accuracy (validation)`           | Shows the loss and accuracy of validation. |
+| `loss & accuracy (test)`                 | Shows the loss and accuracy of testing. |
+| `Model_Params`               | Shows the used parameters for initializing the model. |
+
+##### 6. model.h5: The trained model to be loaded for testing and deployment
+
+
 
 
 
