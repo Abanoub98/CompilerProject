@@ -33,26 +33,80 @@ If you don’t have a Dataset for Dynamic Sign Language, use our dataset which i
 
 # Getting started
 #### Run the main.py script 
-The model contain 3 main parts
+The model contains 3 main parts
 - Extract keypoints
 - Train the model
 - Real-Time run
 
 
 ### 1- Extract keypoints
-Before extracting intialize the n_thread parameter with the number of threads 
+This phase is used to extract the keypoints from the given dataset through MediaPipe framework.
+
+_Before extracting initialize the n_thread parameter with the number of threads_
+
 Enter "1" for the selection as shown 
 <p align="center">
-  <img src="docs/images/extract keypoints.png" alt="extract keypoints selection" height="150"/>
+  <img src="docs/images/extract keypoints.png" alt="Extract keypoints selection" height="150"/>
 </p>
-After the selection follow the on-screen system questionare that will ask for this inputs
+After the selection follow the on-screen system questionnaire that will ask for these inputs
 
 - Enter the name of the dataset
 - Enter the directory for the dataset
 - Enter the number of frames to be extracted from each video
-- Choose the extractation type
+- Choose the extraction type
 - in addition to the hands, Do you need to extract the pose or face points 
-- Do you 
+- Do you need to process the scale (Depth)
+- Enter the directory to save the folder
+- Enter the folder name
+
+#### Answer the following questions depending on your situation following the on-screen commands 
+
+A snapshot example for the run: 
+<p align="center">
+  <img src="docs/images/Extract keypoints script1.jpeg" alt="Extract keypoints questionnaire example" height="300"/>
+</p>
+
+note: the snapshot was captured before adding the advanced technique for processing the scale
+
+After a successful run, all the occupied threads should complete 100% as shown
+<p align="center">
+  <img src="docs/images/Threads complete.png" height="150"/>
+</p>
+
+Then two CSV files should be saved in the input directory as shown
+
+<p align="center">
+  <img src="docs/images/DSL_CSV.PNG" height="100"/>
+</p>
+
+- Dataset CSV file: contain the first column to show the labels of the dataset, while the rest columns shows the extracted keypoints 
+- Meta-Data CSV file: it contains the seven meta-data for the exctration process as shown in the next table
+
+#### Meta-Data
+
+| Data Label                     | Description                                |
+| ----------------------------- | ------------------------------------------ |
+| `dataset`                        | Shows the dataset name as pre input. |
+| `keypoint_extractor_type`                  | Shows the extraction type as pre input. |
+| `sequence_length`         | Shows the number of frames as pre input. |
+| `n_words` | Shows the number of the signs in the used dataset. |
+| `n_samples`                 | Shows the number of samples in each sign from the used dataset. |
+| `count_of_features`        | Shows the number of the extracted features. |
+| `extracted body parts` | Shows the extracted parts of the body. |
+
+### 1- Train the model
+This phase is used to train the model using .
+
+_Before the training process intialize the following params depending on your situation
+
+
+_
+
+Enter "1" for the selection as shown 
+<p align="center">
+  <img src="docs/images/extract keypoints.png" alt="Extract keypoints selection" height="150"/>
+</p>
+After the selection follow the on-screen system questionnaire that will ask for these inputs
 
 
 
