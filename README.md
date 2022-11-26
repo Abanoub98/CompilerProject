@@ -113,7 +113,19 @@ Enter "2" for the selection as shown
 <p align="center">
   <img src="docs/images/train the model.png" alt="Train the model selection" height="150"/>
 </p>
-After the selection follow the on-screen system questionnaire that will ask for these inputs
+After the selection, the training process will start immediately using the pre-initialized params.
+After a successful train, the output will be six different files that will be saved automatically in the directory that appears on console.
+
+
+the outputed six files:
+
+##### 1. accuracy.png: A plot image for the accuracy throughout the training
+##### 2. loss.png: A plot image for the loss throughout the training
+##### 3. history.csv: The history of the accuracy and the loss numbers throughout training
+##### 4. labels.npy: The labels’ names that the model trained on
+##### 5. model.h5: The trained model for testing and deployment
+##### 6. Meta-Data.csv: A CSV file contains all the details about the model and the dataset process as shown in the next table
+
 
 
 
