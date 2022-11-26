@@ -151,7 +151,25 @@ The outputed six files:
 
 ##### 6. model.h5: The trained model to be loaded for testing and deployment
 
+### 3- Real-Time run
+This phase is used for the Real-Time Recognition
 
+
+_Before the run:_
+
+_1- attach any normal or mobile camera to your device and setup it._
+
+_2- intialize the model_folder_path with the path of your model file as shown_
+<p align="center">
+  <img src="docs/images/Real-time intialize.png" height="100"/>
+</p>
+
+#### Run the main.py script 
+Enter "3" for the selection as shown 
+<p align="center">
+  <img src="docs/images/Real-Time test.png" alt="Real-Time run selection" height="150"/>
+</p>
+After the selection, the attached camera will run and the Real-Time Recognition process will start immediately.
 
 
 
