@@ -117,8 +117,7 @@ After the selection, the training process will start immediately using the pre-i
 After a successful train, the output will be six different files that will be saved automatically in the directory that appears on console.
 
 
-the outputed six files:
-
+The outputed six files:
 ##### 1. accuracy.png: A plot image for the accuracy throughout the training
 ##### 2. loss.png: A plot image for the loss throughout the training
 ##### 3. history.csv: The history of the accuracy and the loss numbers throughout training
