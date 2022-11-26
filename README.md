@@ -32,7 +32,6 @@ The following prerequisites are required to make this repository work:
 If you don’t have a Dataset for Dynamic Sign Language, use our dataset which is available for free for educational purposes. Try the [DSL-46 Dataset](https://www.google.com).
 
 # Getting started
-#### Run the main.py script 
 The model contains 3 main parts
 - Extract keypoints
 - Train the model
@@ -44,6 +43,7 @@ This phase is used to extract the keypoints from the given dataset through Media
 
 _Before extracting initialize the n_thread parameter with the number of threads_
 
+#### Run the main.py script 
 Enter "1" for the selection as shown 
 <p align="center">
   <img src="docs/images/extract keypoints.png" alt="Extract keypoints selection" height="150"/>
@@ -94,17 +94,24 @@ Then two CSV files should be saved in the input directory as shown
 | `count_of_features`        | Shows the number of the extracted features. |
 | `extracted body parts` | Shows the extracted parts of the body. |
 
-### 1- Train the model
-This phase is used to train the model using .
+### 2- Train the model
+This phase is used to train the model, the process starts by reading the meta-data and the dataset keypoints from the pre extracted CSV files.
 
-_Before the training process intialize the following params depending on your situation
+Then, the following actions will be made respectively to suit the model:
+- Reshape the data and lables
+- Set the shape of the input and the output
+- Encode the labels
+- Split the data into train, test and validation samples
 
-
-_
-
-Enter "1" for the selection as shown 
+_Before the training process intialize the following params depending on your situation_
 <p align="center">
-  <img src="docs/images/extract keypoints.png" alt="Extract keypoints selection" height="150"/>
+  <img src="docs/images/params.png" alt="A snapshot example of pre intialized params" height="200"/>
+</p>
+
+#### Run the main.py script 
+Enter "2" for the selection as shown 
+<p align="center">
+  <img src="docs/images/train the model.png" alt="Train the model selection" height="150"/>
 </p>
 After the selection follow the on-screen system questionnaire that will ask for these inputs
 
